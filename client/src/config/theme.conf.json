@@ -1,0 +1,39 @@
+{
+  "current": "0",
+  "0": {
+    "input": {
+      "color": "red",
+      "fontSize": "16px",
+      "borderWidth": "1px",
+      "borderColor": "red"
+    },
+    "button": {
+      "color": "red",
+      "fontSize": "16px"
+    }
+  },
+  "1": {
+    "input": {
+      "color": "blue",
+      "fontSize": "15px",
+      "borderWidth": "1px",
+      "borderColor": "blue"
+    },
+    "button": {
+      "color": "blue",
+      "fontSize": "15px"
+    }
+  },
+  "2": {
+    "input": {
+      "color": "blue",
+      "fontSize": "15px",
+      "borderWidth": "1px",
+      "borderColor": "yellow"
+    },
+    "button": {
+      "color": "blue",
+      "fontSize": "15px"
+    }
+  }
+}

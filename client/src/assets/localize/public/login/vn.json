@@ -1,0 +1,17 @@
+{
+  "LOGIN_USERNAME": "Tên đăng nhập",
+  "LOGIN_PASSWORD": "Mật khẩu",
+  "LOGIN_VALIDATION_USERNAME_NOT_EXIST": "Tên đăng nhập không tồn tại",
+  "LOGIN_VALIDATION_PASSWORD_INCORRECT": "Mật khẩu vừa nhập không đúng",
+  "LOGIN_VALIDATION_USERNAME_MISSING": "Vui lòng nhập tên đăng nhập",
+  "LOGIN_VALIDATION_USERNAME_INVALID": "Tên đăng nhập không hợp lệ",
+  "LOGIN_VALIDATION_PASSWORD_MISSING": "Vui lòng nhập mật khẩu",
+  "LOGIN_HEADER_ACCOUNT_LOCKED": "Tài khoản bị khóa",
+  "LOGIN_VALIDATION_ACCOUNT_LOCKED_1": "Tài khoản của bạn đã bị khóa vì nhập sai thông tin đăng nhập quá nhiều lần.",
+  "LOGIN_VALIDATION_ACCOUNT_LOCKED_2": "Vui lòng liên hệ ngân hàng để mở khóa",
+  "LOGIN_HOTLINE": "Số tổng đài: xxx",
+  "LOGIN_BUTTON_NEXT": "TIẾP TỤC",
+  "LOGIN_BUTTON_FORGOT_LOGIN_INFO": "Quên thông tin đăng nhập?",
+  "LOGIN_BUTTON_REGISTER": "Không có tài khoản? Đăng ký",
+  "LOGIN_BUTTON_BACK_HOME": "Về trang chủ"
+}

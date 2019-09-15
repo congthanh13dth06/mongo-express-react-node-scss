@@ -1,0 +1,13 @@
+{
+  "port": 3000,
+  "mongoConfig": {
+    "host": "localhost",
+    "port": "27017",
+    "maxPoolSize": 16,
+    "minPoolSize": 4,
+    "username": "root",
+    "password": "123123",
+    "database": "testdb",
+    "serverSelectionTimeout": 5000
+  }
+}

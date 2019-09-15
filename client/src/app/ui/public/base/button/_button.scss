@@ -1,0 +1,22 @@
+.btn{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: font(display-bold);
+    padding: 11px;
+    outline: none;
+    cursor: pointer;
+    @include mix-border($shadow:(0 3px 6px hex-to-rgba(#000,0.16)), $radius:30px, $border: none);
+    transition:all 0.25s ease-in-out;
+    &-primary{
+        background: color(BG-Orange-Light-High);
+        color:color(BG_Text-Main-White);
+        &:hover, &:active, &:focus {
+            background: #FF9A4B
+        }
+    }
+    &[disabled]{
+        background: #C2C2C2C2;
+        cursor: default;
+        @include mix-border($shadow:none, $radius:30px, $border: none);
+    }
+}

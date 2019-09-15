@@ -1,0 +1,284 @@
+$grid-columns: 12 !default; // Set number of columns in the grid
+$xs-max: 40rem !default; // Set xs breakpoint's max width
+$sm-max: 64rem !default; // Set sm breakpoint's max width
+$md-max: 90rem !default; // Set md breakpoint's max width
+$lg-max: 120rem !default; // Set lg breakpoint's max width
+$gutter: 1rem !default; // Set gutter size
+$content-well-max-width: "none" !default; // Set the max-width of the content well
+$sm-start: ($xs-max + 1); // Generate sm breakpoint's min width
+$md-start: ($sm-max + 1); // Generate md breakpoint's min width
+$lg-start: ($md-max + 1); // Generate lg breakpoint's min width
+$xl-start: ($lg-max + 1); // Generate xl breakpoint's min width
+// Breakpoints
+// Create breakpoint range statements to be used in media queries
+$breakpoint-xs-only: "only screen and (max-width: #{$xs-max})"; // 0 -> xs-max range
+$breakpoint-sm-up: "only screen and (min-width: #{$sm-start})"; // sm-start -> up range
+$breakpoint-sm-only: "only screen and (min-width: #{$sm-start}) and (max-width: #{$sm-max})"; // sm-start -> sm-max range
+$breakpoint-md-up: "only screen and (min-width: #{$md-start})"; // md-start -> up range
+$breakpoint-md-only: "only screen and (min-width: #{$md-start}) and (max-width: #{$md-max})"; // md-start -> md-max range
+$breakpoint-lg-up: "only screen and (min-width: #{$lg-start})"; // lg-start -> up range
+$breakpoint-lg-only: "only screen and (min-width: #{$lg-start}) and (max-width: #{$lg-max})"; // lg-start -> lg-max range
+$breakpoint-xl-up: "only screen and (min-width: #{$xl-start})"; // xl-start -> up range
+$breakpoints-all: (
+  $breakpoint-xs-only,
+  $breakpoint-sm-up,
+  $breakpoint-sm-only,
+  $breakpoint-md-up,
+  $breakpoint-md-only,
+  $breakpoint-lg-up,
+  $breakpoint-lg-only,
+  $breakpoint-xl-up
+);
+$breakpoint-ups: (
+  $breakpoint-sm-up,
+  $breakpoint-md-up,
+  $breakpoint-lg-up,
+  $breakpoint-xl-up
+);
+$breakpoint-all-prefixes: (
+  "xs",
+  "xs-only",
+  "sm",
+  "sm-only",
+  "md",
+  "md-only",
+  "lg",
+  "lg-only",
+  "xl"
+);
+$breakpoint-up-prefixes: (
+  "xs",
+  "sm",
+  "md",
+  "lg",
+  "xl"
+); // No gutters
+// No text alignment with justified container classes (center-xs, for example)
+
+.row {
+  @include row();
+}
+
+.row.reverse {
+  @include row-reverse();
+}
+
+.row.natural-height {
+  @include row-natural-height();
+}
+
+.row.flex-column {
+  @include row-flex-column();
+}
+
+.col {
+  @include col();
+}
+
+.col.reverse {
+  @include col-reverse();
+}
+
+.first {
+  order: -1;
+}
+
+.last {
+  order: 1;
+}
+
+.align-start {
+  align-self: flex-start;
+}
+
+.align-end {
+  align-self: flex-end;
+}
+
+.align-center {
+  align-self: center;
+}
+
+.align-baseline {
+  align-self: baseline;
+}
+
+.align-stretch {
+  align-self: stretch;
+}
+// Mixin to run inside of for loop - creates col/breakpoint classes * Not for developer use *
+@mixin col-factory($thisPrefix) {
+  .col-#{$thisPrefix} {
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+    padding: $gutter;
+  }
+  @for $i from 1 through $grid-columns {
+    .col-#{$thisPrefix}-#{$i} {
+      box-sizing: border-box;
+      flex-basis: 100% / $grid-columns * $i;
+      max-width: 100% / $grid-columns * $i;
+      padding: $gutter;
+    }
+
+    .col-#{$thisPrefix}-offset-#{$i} {
+      margin-left: 100% / $grid-columns * $i;
+    }
+  }
+
+  .row.start-#{$thisPrefix} {
+    justify-content: flex-start;
+  }
+
+  .row.center-#{$thisPrefix} {
+    justify-content: center;
+  }
+
+  .row.end-#{$thisPrefix} {
+    justify-content: flex-end;
+  }
+
+  .row.top-#{$thisPrefix} {
+    align-items: flex-start;
+  }
+
+  .row.middle-#{$thisPrefix} {
+    align-items: center;
+  }
+
+  .row.bottom-#{$thisPrefix} {
+    align-items: flex-end;
+  }
+
+  .row.around-#{$thisPrefix} {
+    justify-content: space-around;
+  }
+
+  .row.between-#{$thisPrefix} {
+    justify-content: space-between;
+  }
+
+  .first-#{$thisPrefix} {
+    order: -1;
+  }
+
+  .last-#{$thisPrefix} {
+    order: 1;
+  }
+}
+// Mixin to run inside of for loop - creates col/breakpoint classes
+@for $i from 1 through length($breakpoint-up-prefixes) {
+  $thisPrefix: nth($breakpoint-up-prefixes, $i);
+
+  @if $thisPrefix == "xs" {
+    @include col-factory($thisPrefix);
+  } @else
+  if $thisPrefix == "sm" {
+    @media #{$breakpoint-sm-up} {
+      @include col-factory($thisPrefix);
+    }
+  } @else
+  if $thisPrefix == "md" {
+    @media #{$breakpoint-md-up} {
+      @include col-factory($thisPrefix);
+    }
+  } @else
+  if $thisPrefix == "lg" {
+    @media #{$breakpoint-lg-up} {
+      @include col-factory($thisPrefix);
+    }
+  } @else
+  if $thisPrefix == "xl" {
+    @media #{$breakpoint-xl-up} {
+      @include col-factory($thisPrefix);
+    }
+  }
+}
+
+.col-gutter-lr {
+  padding: 0 $gutter;
+}
+
+.col-no-gutter {
+  padding: 0;
+}
+
+.show {
+  display: block !important;
+}
+
+.row.show {
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.hide {
+  display: none !important;
+}
+// Mixin to run inside of for loop - creates visibility classes * Not for developer use *
+@mixin vis-factory($thisPrefix) {
+  .show-#{$thisPrefix} {
+    display: block !important;
+  }
+
+  .row.show-#{$thisPrefix} {
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+
+  .hide-#{$thisPrefix} {
+    display: none !important;
+  }
+}
+// Mixin to run inside of for loop - creates visibility classes * Not for developer use *
+@for $i from 1 through length($breakpoint-all-prefixes) {
+  $thisPrefix: nth($breakpoint-all-prefixes, $i);
+
+  @if $thisPrefix == "xs" {
+    @include vis-factory($thisPrefix);
+  } @else
+  if $thisPrefix == "xs-only" {
+    @media #{$breakpoint-xs-only} {
+      @include vis-factory($thisPrefix);
+    }
+  } @else
+  if $thisPrefix == "sm" {
+    @media #{$breakpoint-sm-up} {
+      @include vis-factory($thisPrefix);
+    }
+  } @else
+  if $thisPrefix == "sm-only" {
+    @media #{$breakpoint-sm-only} {
+      @include vis-factory($thisPrefix);
+    }
+  } @else
+  if $thisPrefix == "md" {
+    @media #{$breakpoint-md-up} {
+      @include vis-factory($thisPrefix);
+    }
+  } @else
+  if $thisPrefix == "md-only" {
+    @media #{$breakpoint-md-only} {
+      @include vis-factory($thisPrefix);
+    }
+  } @else
+  if $thisPrefix == "lg" {
+    @media #{$breakpoint-lg-up} {
+      @include vis-factory($thisPrefix);
+    }
+  } @else
+  if $thisPrefix == "lg-only" {
+    @media #{$breakpoint-lg-only} {
+      @include vis-factory($thisPrefix);
+    }
+  } @else
+  if $thisPrefix == "xl" {
+    @media #{$breakpoint-xl-up} {
+      @include vis-factory($thisPrefix);
+    }
+  }
+}

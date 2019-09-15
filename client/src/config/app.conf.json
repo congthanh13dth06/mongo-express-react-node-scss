@@ -1,0 +1,19 @@
+{
+  "PORT": 9000,
+  "VERSION": "0.0.0.1",
+  "REQUEST_TIMEOUT": 10000,
+  "LOCALIZE": {
+    "CURRENT": "vn",
+    "LANGUAGE": [
+      {"key": "vn", "text": "Tiếng Việt"},
+      {"key": "en", "text": "English"}
+    ]
+  },
+  "OTP": {
+    "PUBLIC": {
+      "MAX_LENGTH": 6,
+      "CHARACTER_IS_NUMBER": true,
+      "TIME_SHOW_RESEND": 15000
+    }
+  }
+}

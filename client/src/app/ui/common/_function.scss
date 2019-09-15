@@ -1,0 +1,18 @@
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+}
+@function font($font-name) {
+  @return map-get($fonts, $font-name)
+}
+@function calc-plus($arg1, $arg2) {
+  @return $arg1+$arg2
+}
+@function calc-minus($arg1, $arg2) {
+  @return $arg1 - $arg2
+}
+@function hex-to-rgba($color, $alpha) {
+  @return rgba($color, $alpha)
+}
+@function z-index($index-name) {
+  @return map-get($z-index, $index-name)
+}

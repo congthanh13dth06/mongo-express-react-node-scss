@@ -1,0 +1,17 @@
+{
+  "LOGIN_USERNAME": "Username",
+  "LOGIN_PASSWORD": "Password",
+  "LOGIN_VALIDATION_USERNAME_NOT_EXIST": "Username does not exist",
+  "LOGIN_VALIDATION_PASSWORD_INCORRECT": "Password entered is incorrect",
+  "LOGIN_VALIDATION_USERNAME_MISSING": "Please enter username",
+  "LOGIN_VALIDATION_USERNAME_INVALID": "Username is invalid",
+  "LOGIN_VALIDATION_PASSWORD_MISSING": "Please enter password",
+  "LOGIN_HEADER_ACCOUNT_LOCKED": "Account locked",
+  "LOGIN_VALIDATION_ACCOUNT_LOCKED_1": "Your account has been locked due to several unsuccessful login attempts.",
+  "LOGIN_VALIDATION_ACCOUNT_LOCKED_2": "Please contact our bank to unlock",
+  "LOGIN_HOTLINE": "Hotline: xxx",
+  "LOGIN_BUTTON_NEXT": "NEXT",
+  "LOGIN_BUTTON_FORGOT_LOGIN_INFO": "Forgot login information?",
+  "LOGIN_BUTTON_REGISTER": "Don't have account? Register",
+  "LOGIN_BUTTON_BACK_HOME": "Back home"
+}

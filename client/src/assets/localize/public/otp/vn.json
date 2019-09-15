@@ -1,0 +1,15 @@
+{
+  "OTP_VERIFY_INTRODUCTION_PHONE": "Để xác nhận giao dịch, vui lòng nhập mã xác thực đã được gửi đến số điện thoại của bạn",
+  "OTP_VERIFY_INTRODUCTION_EMAIL": "Để xác nhận giao dịch, vui lòng nhập mã xác thực đã được gửi đến email của bạn",
+  "OTP_NOT_RECEIVE_OTP": "Không nhận được OTP?",
+  "OTP_VALIDATION_OTP_INCORRECT": "Mã OTP bạn vừa nhập không đúng",
+  "OTP_VALIDATION_OTP_EXPIRED": "Mã xác thực bạn vừa nhập đã hết hạn",
+  "OTP_VALIDATION_WRONG_RELOGIN": "Bạn đã nhập sai mã xác thực quá số lần quy định. Vui lòng đăng nhập lại.",
+  "OTP_VALIDATION_WRONG_NOT_CONTINUE": "Bạn đã nhập sai mã xác thực quá số lần quy định. Bạn không thể tiếp tục bước tiếp theo.",
+  "OTP_BUTTON_RESEND": "Gửi lại",
+  "OTP_BUTTON_CANCEL": "Hủy",
+  "OTP_BUTTON_RELOGIN": "Đăng nhập lại",
+  "OTP_BUTTON_AGREE": "Đồng ý",
+  "OTP_TITLE_VERIFY": "Xác thực giao dịch",
+  "OTP_TITLE_WRONG": "Sai mã xác thực"
+}

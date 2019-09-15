@@ -1,0 +1,16 @@
+@include keyframes(pulse) {
+  0% {
+    background: color(BG-Gray-Dark-Light-High);
+    transform: scale(1);
+  }
+
+  25% {
+    background: darken(color(BG-Gray-Dark-Light-High), 10%);
+    transform: scale(1.015);
+  }
+
+  50% {
+    background: color(BG-Gray-Dark-Light-High);
+    transform: scale(1);
+  }
+}

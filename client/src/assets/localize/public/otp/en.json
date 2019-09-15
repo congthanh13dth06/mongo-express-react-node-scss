@@ -1,0 +1,15 @@
+{
+  "OTP_VERIFY_INTRODUCTION_PHONE": "To confirm the transaction, please enter OTP sent to your phone number",
+  "OTP_VERIFY_INTRODUCTION_EMAIL": "To confirm the transaction, please enter OTP sent to your email",
+  "OTP_NOT_RECEIVE_OTP": "Haven't received OTP?",
+  "OTP_VALIDATION_OTP_INCORRECT": "The OTP you have entered is incorrect",
+  "OTP_VALIDATION_OTP_EXPIRED": "The OTP you have entered is expired",
+  "OTP_VALIDATION_WRONG_RELOGIN": "You have entered wrong OTP too many times. Please login again.",
+  "OTP_VALIDATION_WRONG_NOT_CONTINUE": "You have entered wrong OTP too many times. You cannot continue next step.",
+  "OTP_BUTTON_RESEND": "Re-send",
+  "OTP_BUTTON_CANCEL": "Cancel",
+  "OTP_BUTTON_RELOGIN": "Re-login",
+  "OTP_BUTTON_AGREE": "Agree",
+  "OTP_TITLE_VERIFY": "Verify transaction",
+  "OTP_TITLE_WRONG": "Wrong OTP"
+}
